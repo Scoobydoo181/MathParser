@@ -86,7 +86,6 @@ class AdditionExpression : public BinaryExpression
 
         double evaluate()
         {
-            cout << "Evaluating Addition" << endl;
             return lhs->evaluate() + rhs->evaluate();
         }
 };
@@ -107,7 +106,6 @@ class SubtractionExpression : public BinaryExpression
 
         double evaluate() 
         {
-            cout << "Evaluating Subtraction" << endl;
             return lhs->evaluate() - rhs->evaluate();
         }
 };
@@ -128,7 +126,6 @@ class MultiplicationExpression : public BinaryExpression
 
         double evaluate() 
         {
-            cout << "Evaluating Multiplication" << endl;
             return lhs->evaluate() * rhs->evaluate();
         }
 };
@@ -157,7 +154,6 @@ class DivisionExpression : public BinaryExpression
 
         double evaluate() 
         {
-            cout << "Evaluating Division" << endl;
             return lhs->evaluate() / rhs->evaluate();
         }
 };
@@ -178,7 +174,6 @@ class ExponentiationExpression : public BinaryExpression
 
         double evaluate() 
         {
-            cout << "Evaluating Exponentiation" << endl;
             return pow(lhs->evaluate(),  rhs->evaluate());
         }
 };
@@ -198,7 +193,6 @@ class ParentheticalExpression : public Expression
 
         double evaluate() 
         {
-            cout << "Evaluating Parenthetical" << endl;
             return rhs->evaluate();
         }
 };
@@ -220,7 +214,6 @@ class ConstantExpression : public Expression
 
         double evaluate() 
         {
-            cout << "Evaluating Constant" << endl;
             return value;
         }
 };
